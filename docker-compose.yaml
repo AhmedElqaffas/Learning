@@ -1,0 +1,15 @@
+services:
+    my-backend:
+        build: ./backend # build dockerfile in my 'backend' folder
+        ports:
+            - "8080:8080"
+        networks:
+            - net
+    redis:
+        # pull ready image from hub
+        image: "redis:8.4-alpine"
+        networks:
+            - net
+# so that spring can connect to host "redis"
+networks:
+    net:
