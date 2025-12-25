@@ -19,7 +19,7 @@ cd backend
 ```bash
 docker compose up --build
 ```
-3. Send a request to localhost:8080/<todo_id>. Example:
+3. Open another terminal and send a request to localhost:8080/<todo_id>. Example:
 ```curl
 curl localhost:8080/2
 ```
@@ -27,3 +27,9 @@ curl localhost:8080/2
 This is because the requested todo is cached.
 4. Wait for 15 seconds and resend the request, the response will take
 ~= 3 seconds because the cached todo has expired.
+5. Stop docker container by either pressing `CTRL + C` in the first terminal, 
+or `docker compose down` in the second terminal.
+- If you used `CTRL + C`, run the following command to remove the containers.
+```bash
+docker compose rm
+```
