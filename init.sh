@@ -6,6 +6,9 @@ mkdir workspace
 cd workspace
 git init
 
+touch myfile.txt
+git add . && git commit -m "C0 - base commit"
+
 echo "FIRST line" > myfile.txt
 git add . && git commit -m "C1 - first line"
 
